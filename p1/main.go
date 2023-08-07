@@ -29,12 +29,11 @@ func applyDataToPointer(src, dst any) {
 
 func main() {
 
-	/*db := NewInMemoryDb()
+	db := NewInMemoryDb()
 
 	if err := initDB(db); err != nil {
 		panic(err)
 	}
-	*/
 
 	// Database setup complete
 	// sqlite test. init database in memory
