@@ -12,7 +12,6 @@ type CommentTable struct {
 }
 
 func NewCommentTable(db *sql.DB) *CommentTable {
-
 	return &CommentTable{
 		db: db,
 	}
