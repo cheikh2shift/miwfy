@@ -96,8 +96,3 @@ func main() {
 	}
 
 }
-
-func initDB(db DatabaseWrapper) error {
-
-	return nil
-}
