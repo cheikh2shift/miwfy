@@ -7,6 +7,7 @@ require (
 	github.com/gin-gonic/gin v1.9.1
 	github.com/mattn/go-sqlite3 v1.14.17
 	golang.org/x/net v0.10.0
+	golang.org/x/sync v0.4.0
 	golang.org/x/text v0.9.0
 	golang.org/x/time v0.3.0
 )
