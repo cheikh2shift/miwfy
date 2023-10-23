@@ -10,7 +10,14 @@ type ChatRoom struct {
 }
 
 func GetAverageAction(c *ChatRoom) int {
-	return c.TotalActionOnline / len(c.Usernames)
+
+	users := len(c.Usernames)
+
+	if users == 0 {
+		return 0
+	}
+
+	return c.TotalActionOnline / users
 }
 
 func (c *ChatRoom) CalculateAverageAction() {
