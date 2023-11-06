@@ -1,13 +1,60 @@
 package main
 
 import (
-	"fmt"
 	"os"
 
 	file "github.com/cheikh2shift/miwfy/osfile"
 )
 
 func main() {
+
+	f, err := os.OpenFile(
+		"./test.txt",
+		os.O_RDWR|os.O_CREATE,
+		0755,
+	)
+
+	if err != nil {
+		panic(err)
+	}
+
+	data, err := file.Get(f)
+
+	str := string(data) + "+"
+
+	err = file.Save(f, str)
+
+	if err != nil {
+		panic(err)
+	}
+
+}
+
+func bruteMode() {
+
+	f, err := os.OpenFile(
+		"./test.txt",
+		os.O_RDWR|os.O_CREATE,
+		0755,
+	)
+
+	if err != nil {
+		panic(err)
+	}
+
+	data, err := file.Get(f)
+
+	str := string(data) + "+"
+
+	err = file.Save(f, str)
+
+	if err != nil {
+		panic(err)
+	}
+
+}
+
+func appendMode() {
 
 	f, err := os.OpenFile(
 		"./test.txt",
@@ -18,10 +65,6 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-
-	data, err := file.Get(f)
-
-	fmt.Printf("Current Entries:\n%s\n", data)
 
 	err = file.Save(f, "+")
 
