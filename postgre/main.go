@@ -22,7 +22,7 @@ type Task struct {
 }
 
 func main() {
-	connStr := "postgres://postgres:postgres@localhost:5433/individuals?sslmode=disable"
+	connStr := "postgres://postgres:postgres@localhost:5432/individuals?sslmode=disable"
 	ctx := context.Background()
 
 	db, err := kpgx.New(ctx, connStr, ksql.Config{})
